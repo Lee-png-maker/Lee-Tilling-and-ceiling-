@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,12 @@
 
 <meta name="description" content="Lee Tiling & Ceilings provides floor and wall tiling, bathroom and kitchen tiling, ceiling installation, repairs, bulkheads and cornices.">
 
+<!-- WhatsApp Icon Font -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -36,7 +40,7 @@ body{
     --light:#f6f8fa;
     --grey:#697581;
     --border:#dfe5ea;
-    --gold:#d3a84c;
+    --green:#25D366;
 }
 
 a{
@@ -98,6 +102,19 @@ header{
     background:var(--blue);
     padding:10px 17px;
     border-radius:5px;
+}
+
+.whatsapp-nav{
+    background:#25D366 !important;
+    color:white !important;
+    padding:10px 16px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.whatsapp-nav:hover{
+    background:#1ebe5d !important;
+    color:white !important;
 }
 
 .menu{
@@ -162,7 +179,10 @@ header{
 }
 
 .btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
     padding:14px 24px;
     border-radius:5px;
     font-weight:bold;
@@ -189,6 +209,16 @@ header{
 .btn-outline:hover{
     background:white;
     color:var(--dark);
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.btn-whatsapp:hover{
+    background:#1ebe5d;
+    transform:translateY(-2px);
 }
 
 /* GENERAL */
@@ -666,6 +696,10 @@ footer a{
     gap:8px;
 }
 
+.footer-links a:hover{
+    color:#55aaff;
+}
+
 .footer-bottom{
     max-width:1200px;
     margin:40px auto 0;
@@ -676,23 +710,29 @@ footer a{
     font-size:13px;
 }
 
-/* WHATSAPP */
+/* FLOATING WHATSAPP */
 
 .whatsapp{
     position:fixed;
     right:20px;
     bottom:20px;
-    width:59px;
-    height:59px;
+    width:62px;
+    height:62px;
     border-radius:50%;
     background:#25D366;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
+    font-size:31px;
     z-index:999;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    box-shadow:0 5px 25px rgba(0,0,0,.30);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+    background:#1ebe5d;
 }
 
 /* MOBILE */
@@ -788,13 +828,21 @@ footer a{
     .form-row{
         grid-template-columns:1fr;
     }
+
+    .buttons .btn{
+        width:100%;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
+
 <!-- HEADER -->
+
 <header>
 
 <nav class="navbar">
@@ -803,7 +851,9 @@ footer a{
 Lee <span>Tiling & Ceilings</span>
 </div>
 
-<div class="menu" onclick="toggleMenu()">☰</div>
+<div class="menu" onclick="toggleMenu()">
+☰
+</div>
 
 <div class="nav-links" id="navLinks">
 
@@ -814,8 +864,14 @@ Lee <span>Tiling & Ceilings</span>
 <a href="#gallery">Gallery</a>
 <a href="#booking">Get Quote</a>
 
-<a href="#booking" class="quote-btn">
-Free Quote
+<a
+href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+target="_blank"
+class="whatsapp-nav">
+
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+
 </a>
 
 </div>
@@ -826,6 +882,7 @@ Free Quote
 
 
 <!-- HERO -->
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -853,10 +910,13 @@ Request A Quote
 </a>
 
 <a
-href="https://wa.me/27688585355"
+href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
 target="_blank"
-class="btn btn-outline">
+class="btn btn-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
 WhatsApp Us
+
 </a>
 
 </div>
@@ -867,6 +927,7 @@ WhatsApp Us
 
 
 <!-- ABOUT -->
+
 <section class="about">
 
 <div class="container about-grid">
@@ -915,6 +976,7 @@ Your space. Your style. Your project.
 
 
 <!-- SERVICES -->
+
 <section class="services" id="services">
 
 <div class="container">
@@ -1020,6 +1082,7 @@ Repairs for selected cracked, damaged or water-affected ceiling areas.
 
 
 <!-- TILING -->
+
 <section class="tiling" id="tiling">
 
 <div class="container feature-grid">
@@ -1095,6 +1158,7 @@ Get Tiling Quote
 
 
 <!-- CEILINGS -->
+
 <section class="ceilings" id="ceilings">
 
 <div class="container feature-grid">
@@ -1170,6 +1234,7 @@ Get Ceiling Quote
 
 
 <!-- TYPES -->
+
 <section class="tile-types">
 
 <div class="container">
@@ -1233,6 +1298,7 @@ Kitchen floors, walls and splashbacks.
 
 
 <!-- WHY -->
+
 <section class="why">
 
 <div class="container">
@@ -1327,6 +1393,7 @@ Send your project details directly through WhatsApp.
 
 
 <!-- PROCESS -->
+
 <section class="process">
 
 <div class="container">
@@ -1422,6 +1489,7 @@ proceed.
 
 
 <!-- GALLERY -->
+
 <section class="gallery" id="gallery">
 
 <div class="container">
@@ -1478,6 +1546,7 @@ project photos as your portfolio grows.
 
 
 <!-- CTA -->
+
 <section class="cta">
 
 <div class="container">
@@ -1501,6 +1570,7 @@ Request A Quote
 
 
 <!-- BOOKING -->
+
 <section class="booking" id="booking">
 
 <div class="container booking-grid">
@@ -1526,8 +1596,11 @@ WhatsApp.
 
 
 <div class="contact-box">
-<strong>WhatsApp</strong>
-<span>068 858 5355</span>
+<strong>
+<i class="fab fa-whatsapp" style="color:#25D366;"></i>
+WhatsApp
+</strong>
+<span>068 868 5355</span>
 </div>
 
 <div class="contact-box">
@@ -1563,7 +1636,7 @@ required
 <input
 type="tel"
 id="phone"
-placeholder="Phone Number"
+placeholder="068 868 5355"
 required
 >
 
@@ -1642,8 +1715,11 @@ required
 
 <button
 type="submit"
-class="btn btn-blue">
-💬 Send Quote Request
+class="btn btn-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+Send Quote Request
+
 </button>
 
 </form>
@@ -1656,6 +1732,7 @@ class="btn btn-blue">
 
 
 <!-- PAYMENT -->
+
 <section class="payment">
 
 <div class="container">
@@ -1677,7 +1754,10 @@ can use our Yoco payment option.
 href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
 target="_blank"
 class="btn btn-blue">
+
+<i class="fas fa-credit-card"></i>
 Pay With Yoco
+
 </a>
 
 </div>
@@ -1686,6 +1766,7 @@ Pay With Yoco
 
 
 <!-- CONTACT -->
+
 <section>
 
 <div class="container">
@@ -1709,10 +1790,13 @@ Send us a WhatsApp message with your tiling or ceiling requirements.
 <div style="text-align:center">
 
 <a
-href="https://wa.me/27688585355"
+href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
 target="_blank"
-class="btn btn-blue">
-WhatsApp 068 858 5355
+class="btn btn-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+WhatsApp 068 868 5355
+
 </a>
 
 </div>
@@ -1723,6 +1807,7 @@ WhatsApp 068 858 5355
 
 
 <!-- FOOTER -->
+
 <footer>
 
 <div class="footer-grid">
@@ -1769,15 +1854,21 @@ Contact
 <div class="footer-links">
 
 <a
-href="https://wa.me/27688585355"
+href="https://wa.me/27688685355"
 target="_blank">
-WhatsApp: 068 858 5355
+
+<i class="fab fa-whatsapp" style="color:#25D366;"></i>
+WhatsApp: 068 868 5355
+
 </a>
 
 <a
 href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
 target="_blank">
+
+<i class="fas fa-credit-card"></i>
 Pay With Yoco
+
 </a>
 
 </div>
@@ -1801,10 +1892,12 @@ All Rights Reserved.
 
 <a
 class="whatsapp"
-href="https://wa.me/27688585355"
+href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
 target="_blank"
 aria-label="WhatsApp">
-☎
+
+<i class="fab fa-whatsapp"></i>
+
 </a>
 
 
@@ -1848,19 +1941,31 @@ const details =
 document.getElementById("details").value;
 
 
+const reference =
+"LT-" +
+Math.floor(100000 + Math.random() * 900000);
+
+
 const message =
 
 `Hello Lee Tiling & Ceilings,
 
 I would like to request a quotation.
 
+Quotation Reference: ${reference}
+
 Name: ${name}
+
 Phone: ${phone}
 
 Service: ${service}
+
 Property Type: ${property}
+
 Property Area/Location: ${area}
+
 Approximate Size: ${size || "Not specified"}
+
 Preferred Date: ${date || "Not specified"}
 
 Project Details:
@@ -1872,7 +1977,7 @@ Thank you.`;
 
 
 const url =
-"https://wa.me/27688585355?text=" +
+"https://wa.me/27688685355?text=" +
 encodeURIComponent(message);
 
 
