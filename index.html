@@ -1,1 +1,1886 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lee Tiling & Ceilings | Professional Finishing Services</title>
+
+<meta name="description" content="Lee Tiling & Ceilings provides floor and wall tiling, bathroom and kitchen tiling, ceiling installation, repairs, bulkheads and cornices.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f8fa;
+    color:#17202a;
+    line-height:1.6;
+}
+
+:root{
+    --blue:#0A66C2;
+    --blue2:#084b8f;
+    --dark:#101820;
+    --dark2:#182632;
+    --white:#fff;
+    --light:#f6f8fa;
+    --grey:#697581;
+    --border:#dfe5ea;
+    --gold:#d3a84c;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(16,24,32,.98);
+    box-shadow:0 3px 15px rgba(0,0,0,.16);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:17px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#55aaff;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.nav-links a{
+    color:white;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#55aaff;
+}
+
+.quote-btn{
+    background:var(--blue);
+    padding:10px 17px;
+    border-radius:5px;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(8,18,28,.72),rgba(8,18,28,.76)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.badge{
+    color:#66b5ff;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    max-width:900px;
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.04;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#55aaff;
+}
+
+.hero p{
+    max-width:680px;
+    font-size:18px;
+    color:#e4ebf1;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:5px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-blue:hover{
+    background:var(--blue2);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--dark);
+}
+
+/* GENERAL */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title .small{
+    color:var(--blue);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin:8px 0 12px;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:var(--grey);
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:500px;
+    background:
+    url("https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:var(--grey);
+    margin-bottom:17px;
+}
+
+.highlight{
+    background:#eef6fd;
+    border-left:4px solid var(--blue);
+    padding:16px 18px;
+    margin-top:25px;
+    font-weight:bold;
+}
+
+/* SERVICES */
+
+.services{
+    background:var(--light);
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:9px;
+}
+
+.card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* TILING */
+
+.tiling{
+    background:white;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.feature-image{
+    min-height:520px;
+    background:
+    url("https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.feature-text .small{
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.feature-text h2{
+    font-size:45px;
+    margin:10px 0 18px;
+}
+
+.feature-text p{
+    color:var(--grey);
+    margin-bottom:20px;
+}
+
+.list{
+    display:grid;
+    gap:12px;
+}
+
+.list-item{
+    display:flex;
+    gap:10px;
+}
+
+.tick{
+    color:var(--blue);
+    font-weight:bold;
+}
+
+/* CEILINGS */
+
+.ceilings{
+    background:var(--dark2);
+    color:white;
+}
+
+.ceiling-image{
+    min-height:520px;
+    background:
+    url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.ceilings .feature-text p{
+    color:#c8d1d9;
+}
+
+.ceilings .feature-text h2{
+    color:white;
+}
+
+/* TILE TYPES */
+
+.tile-types{
+    background:#eef2f5;
+}
+
+.type-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.type{
+    background:white;
+    border:1px solid var(--border);
+    padding:27px 20px;
+    text-align:center;
+}
+
+.type-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.type h3{
+    margin-bottom:7px;
+}
+
+.type p{
+    color:var(--grey);
+    font-size:13px;
+}
+
+/* WHY */
+
+.why{
+    background:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.why-number{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    margin:0 auto 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e8f2fc;
+    color:var(--blue);
+    font-weight:bold;
+}
+
+.why-card h3{
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    background:var(--light);
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    background:white;
+    padding:28px;
+    border:1px solid var(--border);
+}
+
+.process-number{
+    color:var(--blue);
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.process-card h3{
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    height:330px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+/* CTA */
+
+.cta{
+    background:
+    linear-gradient(rgba(10,102,194,.88),rgba(10,102,194,.88)),
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 28px;
+    color:#eaf4ff;
+}
+
+/* BOOKING */
+
+.booking{
+    background:white;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+}
+
+.booking-info h2{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.booking-info p{
+    color:var(--grey);
+    margin-bottom:22px;
+}
+
+.contact-box{
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.contact-box strong{
+    display:block;
+}
+
+.contact-box span{
+    color:var(--grey);
+}
+
+.form-box{
+    background:#f3f6f8;
+    padding:30px;
+}
+
+.form-box h3{
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d8dfe5;
+    background:white;
+    font-family:inherit;
+    margin-bottom:14px;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--blue);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-box button{
+    width:100%;
+}
+
+/* PAYMENT */
+
+.payment{
+    background:#111a23;
+    color:white;
+    text-align:center;
+}
+
+.payment h2{
+    font-size:40px;
+    margin:8px 0 12px;
+}
+
+.payment p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#cbd4dc;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b1117;
+    color:white;
+    padding:50px 20px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer h3 span{
+    color:#55aaff;
+}
+
+footer p,
+footer a{
+    color:#9ca8b3;
+    font-size:14px;
+}
+
+.footer-links{
+    display:grid;
+    gap:8px;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:40px auto 0;
+    padding-top:20px;
+    border-top:1px solid #27313a;
+    text-align:center;
+    color:#68737e;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:59px;
+    height:59px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:67px;
+        left:0;
+        right:0;
+        background:#101820;
+        flex-direction:column;
+        padding:25px;
+        gap:18px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .about-grid,
+    .feature-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .type-grid,
+    .why-grid,
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:65px 18px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2,
+    .about-text h2,
+    .feature-text h2,
+    .booking-info h2,
+    .payment h2,
+    .cta h2{
+        font-size:34px;
+    }
+
+    .service-grid,
+    .type-grid,
+    .why-grid,
+    .process-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image,
+    .feature-image,
+    .ceiling-image{
+        min-height:350px;
+    }
+
+    .gallery-item{
+        height:280px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+Lee <span>Tiling & Ceilings</span>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#tiling">Tiling</a>
+<a href="#ceilings">Ceilings</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Get Quote</a>
+
+<a href="#booking" class="quote-btn">
+Free Quote
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+Tiling • Ceilings • Interior Finishing
+</div>
+
+<h1>
+Beautiful Floors.
+<br>
+<span>Better Ceilings.</span>
+</h1>
+
+<p>
+Lee Tiling & Ceilings provides tiling and ceiling solutions for homes,
+apartments, offices and other properties, helping transform spaces with
+clean and practical finishes.
+</p>
+
+<div class="buttons">
+
+<a href="#booking" class="btn btn-blue">
+Request A Quote
+</a>
+
+<a
+href="https://wa.me/27688585355"
+target="_blank"
+class="btn btn-outline">
+WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about">
+
+<div class="container about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<div class="section-title" style="text-align:left;margin-bottom:20px">
+
+<div class="small">
+Lee Tiling & Ceilings
+</div>
+
+<h2>
+Give Your Interior A Fresh Finish
+</h2>
+
+</div>
+
+<p>
+We help homeowners and property owners improve their interiors with
+floor and wall tiling, ceiling installations, repairs and finishing work.
+</p>
+
+<p>
+From a bathroom makeover to a complete house tiling project or a new
+ceiling, every job can be discussed according to the property's
+requirements and the finish you want.
+</p>
+
+<p>
+Send us your project details, measurements or photos where possible so
+we can better understand the work before preparing a quotation.
+</p>
+
+<div class="highlight">
+Your space. Your style. Your project.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Our Services
+</div>
+
+<h2>
+Tiling & Ceiling Services
+</h2>
+
+<p>
+A range of interior finishing services for residential and commercial
+properties.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="card">
+<div class="icon">⬜</div>
+<h3>Floor Tiling</h3>
+<p>
+Installation of floor tiles for rooms, passages, kitchens and other
+suitable areas.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧱</div>
+<h3>Wall Tiling</h3>
+<p>
+Wall tile installation for bathrooms, kitchens and feature areas.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚿</div>
+<h3>Bathroom Tiling</h3>
+<p>
+Bathroom floors, walls, shower areas and bath surrounds.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🍽️</div>
+<h3>Kitchen Tiling</h3>
+<p>
+Kitchen floors, walls and splashback tiling.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✨</div>
+<h3>Feature Walls</h3>
+<p>
+Decorative tile layouts and feature wall projects.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Tile Repairs</h3>
+<p>
+Replacement of damaged tiles and selected grout repair work.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Ceiling Installation</h3>
+<p>
+New ceiling installation for residential and selected commercial spaces.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Bulkheads</h3>
+<p>
+Decorative bulkhead solutions designed around the room and lighting plan.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Ceiling Repairs</h3>
+<p>
+Repairs for selected cracked, damaged or water-affected ceiling areas.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TILING -->
+<section class="tiling" id="tiling">
+
+<div class="container feature-grid">
+
+<div class="feature-image"></div>
+
+<div class="feature-text">
+
+<div class="small">
+Floor & Wall Tiling
+</div>
+
+<h2>
+Transform Your Floors & Walls
+</h2>
+
+<p>
+The right tiles can completely change the appearance of a room. We
+provide tiling services for residential and selected commercial
+projects.
+</p>
+
+<div class="list">
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Floor tile installation</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Wall tile installation</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Bathroom tiling</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Kitchen splashbacks</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Feature walls</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Porcelain and ceramic tile enquiries</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Tile replacement and selected repairs</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#booking" class="btn btn-blue">
+Get Tiling Quote
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CEILINGS -->
+<section class="ceilings" id="ceilings">
+
+<div class="container feature-grid">
+
+<div class="feature-text">
+
+<div class="small">
+Ceiling Solutions
+</div>
+
+<h2>
+Create A Better Ceiling
+</h2>
+
+<p>
+A well-finished ceiling can change the look of an entire room. We can
+discuss new ceiling installations, repairs and decorative ceiling
+requirements.
+</p>
+
+<div class="list">
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Ceiling board installation</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>PVC ceiling enquiries</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Ceiling repairs</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Bulkheads</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Cornice finishing</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Lighting-ready ceiling layouts</span>
+</div>
+
+<div class="list-item">
+<span class="tick">✓</span>
+<span>Residential and selected commercial ceilings</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#booking" class="btn btn-blue">
+Get Ceiling Quote
+</a>
+
+</div>
+
+<div class="ceiling-image"></div>
+
+</div>
+
+</section>
+
+
+<!-- TYPES -->
+<section class="tile-types">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Project Types
+</div>
+
+<h2>
+Where We Can Help
+</h2>
+
+<p>
+Tell us about your property and the area you want to improve.
+</p>
+
+</div>
+
+
+<div class="type-grid">
+
+<div class="type">
+<div class="type-icon">🏠</div>
+<h3>Homes</h3>
+<p>
+House tiling and ceiling projects.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🏢</div>
+<h3>Offices</h3>
+<p>
+Selected office tiling and ceiling work.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🚿</div>
+<h3>Bathrooms</h3>
+<p>
+Bathroom floors, walls and ceiling solutions.
+</p>
+</div>
+
+<div class="type">
+<div class="type-icon">🍽️</div>
+<h3>Kitchens</h3>
+<p>
+Kitchen floors, walls and splashbacks.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Why Choose Lee
+</div>
+
+<h2>
+A Simple Project Experience
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-number">
+01
+</div>
+
+<h3>
+Quote First
+</h3>
+
+<p>
+Discuss the project and receive a quotation before work begins.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">
+02
+</div>
+
+<h3>
+Project Focus
+</h3>
+
+<p>
+We focus on the specific tiling or ceiling work your property needs.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">
+03
+</div>
+
+<h3>
+Clear Communication
+</h3>
+
+<p>
+Stay in contact with us while your project is being planned.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">
+04
+</div>
+
+<h3>
+WhatsApp Booking
+</h3>
+
+<p>
+Send your project details directly through WhatsApp.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+<section class="process">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Our Process
+</div>
+
+<h2>
+From Enquiry To Finished Space
+</h2>
+
+</div>
+
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<div class="process-number">
+01
+</div>
+
+<h3>
+Send Your Details
+</h3>
+
+<p>
+Tell us what you want tiled or what ceiling work you need.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+02
+</div>
+
+<h3>
+Discuss The Project
+</h3>
+
+<p>
+We discuss the area, surface, materials and scope of work.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+03
+</div>
+
+<h3>
+Receive A Quote
+</h3>
+
+<p>
+The project can be quoted according to the agreed scope.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+04
+</div>
+
+<h3>
+Start The Work
+</h3>
+
+<p>
+Once the quotation and arrangements are accepted, the project can
+proceed.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Our Work
+</div>
+
+<h2>
+Tiling & Ceiling Inspiration
+</h2>
+
+<p>
+These are demonstration images. Replace them with your own completed
+project photos as your portfolio grows.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Ready To Transform Your Space?
+</h2>
+
+<p>
+Whether you need a new tiled floor, bathroom makeover, kitchen
+splashback or ceiling installation, send us your project details.
+</p>
+
+<a href="#booking" class="btn btn-blue">
+Request A Quote
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+
+<div class="container booking-grid">
+
+<div class="booking-info">
+
+<div class="section-title" style="text-align:left;margin-bottom:20px">
+
+<div class="small">
+Get A Quote
+</div>
+
+<h2>
+Tell Us About Your Project
+</h2>
+
+</div>
+
+<p>
+Complete the form and your project information will be prepared for
+WhatsApp.
+</p>
+
+
+<div class="contact-box">
+<strong>WhatsApp</strong>
+<span>068 858 5355</span>
+</div>
+
+<div class="contact-box">
+<strong>Services</strong>
+<span>Tiling • Ceilings • Repairs</span>
+</div>
+
+<div class="contact-box">
+<strong>Project Types</strong>
+<span>Residential • Office • Commercial</span>
+</div>
+
+</div>
+
+
+<div class="form-box">
+
+<h3>
+Project Enquiry
+</h3>
+
+<form onsubmit="sendWhatsApp(event)">
+
+<div class="form-row">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+</div>
+
+
+<select id="service" required>
+
+<option value="">
+Select Service
+</option>
+
+<option>Floor Tiling</option>
+<option>Wall Tiling</option>
+<option>Bathroom Tiling</option>
+<option>Kitchen Tiling</option>
+<option>Kitchen Splashback</option>
+<option>Feature Wall</option>
+<option>Tile Repair</option>
+<option>Ceiling Installation</option>
+<option>PVC Ceiling</option>
+<option>Ceiling Repair</option>
+<option>Bulkhead</option>
+<option>Cornices</option>
+<option>Tiling & Ceiling</option>
+<option>Other</option>
+
+</select>
+
+
+<select id="property" required>
+
+<option value="">
+Property Type
+</option>
+
+<option>House</option>
+<option>Apartment</option>
+<option>Bathroom</option>
+<option>Kitchen</option>
+<option>Office</option>
+<option>Shop</option>
+<option>Commercial Property</option>
+<option>Other</option>
+
+</select>
+
+
+<input
+type="text"
+id="area"
+placeholder="Property Area / Location"
+required
+>
+
+
+<input
+type="text"
+id="size"
+placeholder="Approximate Area / Size (Optional)"
+>
+
+
+<input
+type="date"
+id="date"
+>
+
+
+<textarea
+id="details"
+placeholder="Tell us about the project. Include rooms, tile type, ceiling type, existing condition, measurements or anything else we should know."
+required
+></textarea>
+
+
+<button
+type="submit"
+class="btn btn-blue">
+💬 Send Quote Request
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment">
+
+<div class="container">
+
+<div class="badge">
+Easy Payment
+</div>
+
+<h2>
+Pay With Yoco
+</h2>
+
+<p>
+Once your quotation, deposit or project payment has been agreed, you
+can use our Yoco payment option.
+</p>
+
+<a
+href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
+target="_blank"
+class="btn btn-blue">
+Pay With Yoco
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Contact Lee Tiling & Ceilings
+</div>
+
+<h2>
+Let's Discuss Your Project
+</h2>
+
+<p>
+Send us a WhatsApp message with your tiling or ceiling requirements.
+</p>
+
+</div>
+
+<div style="text-align:center">
+
+<a
+href="https://wa.me/27688585355"
+target="_blank"
+class="btn btn-blue">
+WhatsApp 068 858 5355
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+Lee <span>Tiling & Ceilings</span>
+</h3>
+
+<p>
+Floor and wall tiling, bathroom and kitchen tiling, ceiling
+installation, repairs, bulkheads and interior finishing solutions.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Services
+</h3>
+
+<div class="footer-links">
+
+<a href="#tiling">Floor Tiling</a>
+<a href="#tiling">Wall Tiling</a>
+<a href="#tiling">Bathroom Tiling</a>
+<a href="#ceilings">Ceiling Installation</a>
+<a href="#ceilings">Ceiling Repairs</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<div class="footer-links">
+
+<a
+href="https://wa.me/27688585355"
+target="_blank">
+WhatsApp: 068 858 5355
+</a>
+
+<a
+href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
+target="_blank">
+Pay With Yoco
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Lee Tiling & Ceilings.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/27688585355"
+target="_blank"
+aria-label="WhatsApp">
+☎
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+
+function sendWhatsApp(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const service =
+document.getElementById("service").value;
+
+const property =
+document.getElementById("property").value;
+
+const area =
+document.getElementById("area").value;
+
+const size =
+document.getElementById("size").value;
+
+const date =
+document.getElementById("date").value;
+
+const details =
+document.getElementById("details").value;
+
+
+const message =
+
+`Hello Lee Tiling & Ceilings,
+
+I would like to request a quotation.
+
+Name: ${name}
+Phone: ${phone}
+
+Service: ${service}
+Property Type: ${property}
+Property Area/Location: ${area}
+Approximate Size: ${size || "Not specified"}
+Preferred Date: ${date || "Not specified"}
+
+Project Details:
+${details}
+
+Please let me know how we can proceed with the quotation.
+
+Thank you.`;
+
+
+const url =
+"https://wa.me/27688585355?text=" +
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
